@@ -1,0 +1,152 @@
+.footer {
+	background-color: #252525;
+	color: #fff;
+	font-size: 1rem;
+	padding-top: 3.3em;
+	padding-bottom: 4.4em;
+}
+
+.footer__logo {
+	font-weight: 900;
+	font-size: 2rem;
+	text-transform: uppercase;
+	flex: 1;
+
+	@media (max-width: $tablet) {
+		margin-bottom: 1em;
+	}
+}
+
+.footer__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+
+	@media (max-width: $tablet) {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.footer__socials {
+	margin-bottom: 4.4em;
+	justify-content: center;
+}
+
+.footer__phone {
+	display: block;
+	text-align: right;
+	font-size: 2.4em;
+	margin-bottom: 0.54em;//1.3em;
+	// margin-bottom: 1.3em;
+
+	@media (max-width: $tablet) {
+		text-align: center;
+		margin-bottom: 1.28em;
+	}
+}
+
+.footer__phone-caption {
+	display: block;
+	color: rgba(255, 255, 255, 0.40);
+	font-size: 0.58em;//1.4em;
+	font-style: normal;
+	font-weight: 500;
+	line-height: initial;
+}
+
+.footer__phone-text {
+	display: block;
+	color: var(--c-text-on);
+	font-size: 1em;
+	margin-top: 0.1em;//0.25em;
+	margin-bottom: 0.03em;//0.08em;
+	font-style: normal;
+	font-weight: 700;
+	line-height: initial;
+}
+
+.footer__location {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	font-size: 1rem;
+
+	@media (max-width: $tablet) {
+		margin-bottom: 3rem;
+	}
+}
+
+.footer__location-icon {
+	--size: 2.9em;
+	--width: var(--size);
+	--height: var(--size);
+	width: var(--width);
+	min-width: var(--width);
+	max-width: var(--width);
+	height: var(--height);
+	min-height: var(--height);
+	max-height: var(--height);
+	margin-right: 0.5em;
+}
+.footer__location-address {
+	color: #FFF;
+	text-align: right;
+	font-size: 1.8em;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+
+	@media (max-width: $tablet) {
+		text-align: center;
+		font-size: 1.7em;
+	}
+}
+
+.footer__links-list {
+	display: grid;
+	row-gap: 1.2em;
+	justify-content: center;
+	justify-items: center;
+}
+.footer__links-link {
+	--fg: #fff;
+	text-align: center;
+	font-size: 1.5em;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 100%;
+	// margin-bottom: 0.8em;
+	opacity: 0.4;
+	transition: all 0.3s ease;
+
+	@media (max-width: $tablet) {
+		font-size: 1.4em;
+	}
+}
+
+.footer__links-link:hover {
+	@media (any-hover: hover) {
+		opacity: 1;
+	}
+}
+
+
+.footer__links {
+	flex: 1;
+	@media (max-width: $tablet) {
+		order: 3;
+	}
+}
+
+.footer__socials {
+	flex: 1;
+	@media (max-width: $tablet) {
+		margin-bottom: 2.4em;
+	}
+}
+
+.footer__contact {
+	flex: 1;
+}

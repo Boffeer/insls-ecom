@@ -1,0 +1,135 @@
+.blog-card {
+  --p-top: 2rem;
+  --p-inline: 2.5rem;
+  --p-bottom: 4.7rem;
+	padding: var(--p-top) var(--p-inline) var(--p-bottom);
+	border-radius: 2rem;
+	background: var(--bg-card);
+	box-shadow: 0px 1.4rem 4.4rem 0px rgba(197, 197, 197, 0.25);
+
+	@media (max-width: $tablet) {
+		border-radius: 1.62rem;
+    --p-top: 1.6rem;
+    --p-inline: 1.9rem;
+    --p-bottom: 2.9rem;
+	}
+}
+
+.blog__masonry--init .blog-card {
+  margin-bottom: 3rem;
+  width: 31.5%;
+
+  @media (max-width: $laptop) {
+    width: 48%;
+  }
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+}
+
+.blog-card__media {
+	display: block;
+	//height: 17.5rem;
+  width: auto;
+	background-color: var(--c-border);
+	border-radius: 1.62rem;
+	margin-bottom: 2.1rem;
+  position: relative;
+  padding-top: 100%;
+  margin-top: #{'calc(0px - var(--p-top))'};
+  margin-left: #{'calc(0px - var(--p-inline))'};
+  margin-right: #{'calc(0px - var(--p-inline))'};
+
+	@media (max-width: $tablet) {
+		//height: 15rem;
+		margin-bottom: 1rem;
+	}
+}
+
+.blog-card__pic {
+	display: block;
+	border: 0.1rem solid var(--c-border);
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.blog-card__img {
+	object-fit: cover;
+  object-position: top;
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+}
+
+.blog-card__title {
+	--title-fg: var(--fg-regular);
+	line-height: 1.2;
+	color: var(--fg-regular);
+	font-size: 2rem;
+	font-family: var(--ff-title);
+	font-style: normal;
+	font-weight: 700;
+	line-height: 150%;
+	margin-bottom: 0.6rem;
+	position: relative;
+
+	@media (max-width: $tablet) {
+		font-size: 1.4rem;
+		margin-bottom: 0.5rem;
+		line-height: initial;
+	}
+}
+
+.blog-card__desc {
+	color: #36383A;
+	font-size: 1.7rem;
+	font-family: var(--ff-title);
+	font-style: normal;
+	font-weight: 400;
+	line-height: 125%;
+	margin-bottom: 1.5rem;
+
+	@media (max-width: $tablet) {
+		font-size: 1.4rem;
+		margin-bottom: 0.8rem;
+	}
+}
+
+.blog-card__more {
+	--more-fg: var(--c-secondary);
+	--more-icon-color: var(--more-fg);
+	color: var(--more-fg);
+	font-size: 1.6rem;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	font-weight: 700;
+
+	@media (max-width: $tablet) {
+		font-size: 1.4rem;
+	}
+}
+
+.blog-card__more-text {
+	color: inherit;
+	font-size: inherit;
+}
+
+.blog-card__more-icon {
+	margin-left: 0.3em;
+	--size: 0.8em;
+	--width: var(--size);
+	--height: var(--size);
+	width: var(--width);
+	min-width: var(--width);
+	max-width: var(--width);
+	height: var(--height);
+	min-height: var(--height);
+	max-height: var(--height);
+	--more-icon-color: var(--fg);
+}

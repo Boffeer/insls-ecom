@@ -1,0 +1,128 @@
+.timepicker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  font-size: 1rem;
+
+  background-color: var(--bg-app);
+  border-radius: 1.36em;
+  padding: 0 1em;
+  padding-right: 1.4em;
+
+  @media (max-width: $tablet) {
+    padding: 0 1em;
+    padding-right: 1.4em;
+  }
+}
+
+.timepicker__control {
+  position: relative;
+  width: 70%;
+  height: 2em;
+  padding-top: 2.547em;
+  padding-bottom: 2.547em;
+  box-sizing: content-box;
+
+  @media (max-width: $tablet) {
+    padding-top: 1.547em;
+    padding-bottom: 1.547em;
+  }
+  @media (max-width: $mobile) {
+    padding-top: 1.447em;
+    padding-bottom: 1.447em;
+    width: 60%;
+  }
+}
+
+.timepicker__lines {
+  position: absolute;
+  bottom: 2.2em;
+  left: 0.2em;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 0.4em;
+  border-bottom: 0.1em solid var(--fg-caption);
+  pointer-events: none;
+
+  @media (max-width: $tablet) and (min-width: $mobile + 1) {
+    bottom: 1.8em;
+  }
+}
+
+.timepicker__lines-dash {
+  display: block;
+  width: 0.1em;
+  height: 100%;
+  background-color: var(--fg-caption);
+  pointer-events: none;
+}
+
+
+.timepicker__drag {
+  display: inline-block;
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 2em;
+  background: var(--c-secondary);
+  position: absolute;
+  bottom: 1.6em;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+
+  @media (max-width: $tablet) and (min-width: $mobile + 1) {
+    bottom: 1.2em;
+  }
+}
+
+.timepicker__value {
+  width: 20%;
+  //font-size: 1.6em;
+  font-size: 1.3em;
+  color: var(--fg-regular);
+  background: transparent;
+  text-align: right;
+  padding-left: 0.2em;
+
+  @media (max-width: $mobile) {
+    width: 30%;
+    font-size: 1.2em;
+  }
+}
+
+
+.timepicker__min,
+.timepicker__max {
+  position: absolute;
+  top: 1em;
+  color: #000;
+  font-size: 1.3em;
+  pointer-events: none;
+
+  @media (max-width: $tablet) {
+    //top: -0.5em;
+    top: 0.8em;
+  }
+  @media (max-width: $mobile) {
+    //top: -1em;
+    top: 1em;
+    font-size: 0.7em;
+  }
+}
+
+.timepicker__min {
+  //left: 0.7em;
+  left: 0;
+}
+.timepicker__max {
+  //right: -0.7em;
+  right: 0;
+
+  @media (max-width: $tablet) {
+    right: -1.4em;
+  }
+}

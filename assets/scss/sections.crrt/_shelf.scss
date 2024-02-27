@@ -1,0 +1,28 @@
+.shelf {
+
+}
+
+.shelf__content {
+	font-size: 1rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 3em;
+	margin-bottom: 2em;
+
+	@media (max-width: $tablet) {
+		grid-template-columns: 100%;
+		gap: 1.5em;
+	}
+}
+
+.shelf__message {
+  font-size: 1.8em;
+  @media (min-width: $tablet + 1) {
+    grid-column: span 3;
+  }
+}
+
+.shelf__buttons {
+	display: flex;
+	justify-content: center;
+}

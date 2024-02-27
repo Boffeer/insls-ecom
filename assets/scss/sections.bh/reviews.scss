@@ -1,0 +1,237 @@
+/*
+	Temp
+*/
+.reviews {
+	// display: none;
+}
+/*
+	Main
+*/
+.reviews {
+	background: var(--bg-card);
+	font-size: 1rem;
+	color: #5A5561;
+	overflow: hidden;
+}
+
+.reviews__title {
+	margin-bottom: 1.2em;
+}
+
+.reviews-card {
+	padding: 2.8em 2.8em 3.5em;
+	background-color: #F7F7F9;
+	box-shadow: 0px 0.4em 2em rgba(206, 206, 206, 0.25);
+	border-radius: 2em;//10px;
+	color: #333333;
+
+	@media (max-width: $tablet) {
+		padding: 1em;
+	}
+}
+
+.reviews-card__user {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 0.5em;
+}
+
+.reviews-card__user-pic {
+	--size: 7.2em;
+	max-width: var(--size);
+	min-width: var(--size);
+	width: var(--size);
+	height: var(--size);
+	margin-bottom: 1.2em;
+	border-radius: 999em;
+}
+
+.reviews-card__user-img {
+	border-radius: inherit;
+	display: block;
+	width: 100%;
+	height: 100%;
+  object-fit: cover;
+}
+
+.reviews-card__user-name {
+	font-weight: 900;
+	font-size: 1.5em;
+	line-height: 131.4%;
+	@media (max-width: $tablet) {
+		font-size: 1.5em;
+    margin-bottom: 1em;
+	}
+}
+
+.reviews-card__user-links {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 0.3em;
+}
+
+.reviews-card__user-link {
+	font-weight: 400;
+	font-size: 1.5em;
+	line-height: 134.4%;
+	background: radial-gradient(50% 50% at 50% 50%, #44C4FF 0%, #33B2EC 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+	border-bottom: 0.05555555555555555em solid #44C4FF;
+}
+
+.reviews-card__feedback {
+	font-weight: 400;
+	font-size: 1.5em;
+	line-height: 145.4%;
+	color: #333333;
+	max-width: 87%;
+	letter-spacing: -0.02em;
+
+	@media (max-width: $tablet) {
+		max-width: 91%;
+	}
+}
+
+.reviews-card__media {
+	position: relative;
+	box-shadow: 0px 4px 20px rgba(206, 206, 206, 0.25);
+	border-radius: 0.5555555555555556em;//10px;
+	overflow: hidden;
+  margin-bottom: 1.5em;
+}
+.reviews-card__media-pic {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+.reviews-card__media-img {
+	object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.reviews-card__video {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.reviews-card--has-media {
+	padding: 0;
+	height: 100%;
+}
+
+.reviews-card--has-media .b_video {
+	@media (max-width: $mobile) {
+	    padding-top: 82.4%;
+	}
+}
+
+.reviews-carousel  {
+	width: 100%;
+	overflow: visible;
+	position: relative;
+}
+
+.reviews-carousel__swiper  {
+	overflow: visible;
+	max-width: 95em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 4.7em;
+  transition: all 0.3s ease;
+}
+
+.reviews-carousel__buttons  {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	z-index: 3;
+	display: flex;
+	justify-content: space-between;
+	pointer-events: none;
+
+	@media (max-width: $tablet) {
+	    top: unset;
+	    transform: none;
+	    bottom: 0;
+	}
+}
+
+.reviews-carousel__button-prev,
+.reviews-carousel__button-next {
+	position: static;
+	--size: 5em;
+	max-width: var(--size);
+	min-width: var(--size);
+	width: var(--size);
+	height: var(--size);
+	border-radius: 999em;
+	background: var(--gradient-primary);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	pointer-events: initial;
+
+	@media (max-width: $tablet) {
+		--size: 4em;
+	}
+}
+
+.reviews-carousel__button-prev::before,
+.reviews-carousel__button-next::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/common.crrt/angle-right.svg');
+	background-size: 1.8em;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.reviews-carousel__button-prev::before {
+	transform: scaleX(-1);
+}
+
+.reviews-carousel__slide {
+	opacity: 0;
+	transition: all 0.3s ease-out;
+}
+
+.reviews-carousel__slide.swiper-slide-active {
+	opacity: 1;
+}
+
+.reviews-carousel__slide.swiper-slide-next {
+	opacity: 1;
+}
+
+.reviews-carousel__scrollbar {
+	height: 0.5em;
+	border-radius: 0;
+	background: #ebe5ff;
+
+	@media (max-width: $tablet) {
+		max-width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.reviews-carousel__scrollbar .swiper-scrollbar-drag {
+	background: var(--c-secondary);
+	border-radius: 0;
+}

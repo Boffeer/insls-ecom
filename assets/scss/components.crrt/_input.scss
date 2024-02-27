@@ -1,0 +1,39 @@
+ @import "../components.b/controls/input";
+
+ .input--double {
+    grid-column: span 2;
+ }
+ .input {
+  font-size: 1.4rem;
+  --bg: #FBFBFB;
+  --fg: #4f4f4f;
+   --fg-placeholder: var(--fg-caption);
+
+  --padding-inline: 0.95em;
+  --padding-block: 1.85em;
+  --padding: var(--padding-block) var(--padding-inline);
+  --border-color: var(--bg);
+  --border-width: 0.1rem;
+  --border-radius: 1.36em;
+
+  --fz: 1em;
+  --fw: 300;
+  --lh: initial;
+
+  --border-focus: var(--c-secondary);
+
+  --error-color: #FF3B30;
+  --error-fz: 1rem;
+
+  @media (max-width: $tablet) {
+    font-size: 1.1em;
+    --fz: 1.3em;
+    --padding-block: 1.53636em;
+    --padding-inline: 1.1819em;
+  }
+ }
+
+ .input__error {
+  // display: none;
+
+ }

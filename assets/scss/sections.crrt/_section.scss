@@ -1,0 +1,48 @@
+.section {
+	font-size: 1rem;
+	padding-top: 10em;
+	padding-bottom: 10em;
+
+	@media (max-width: $tablet) {
+		padding-top: 5em;
+		padding-bottom: 5em;
+	}
+}
+
+.section .container {
+	// font-size: 1.5em;
+}
+
+.section-title {
+	font-weight: 900;
+	font-size: 4.5em;
+	text-align: center;
+	margin-bottom: 1.37em;
+	text-transform: uppercase;
+	line-height: initial;
+
+	@media (max-width: $tablet) {
+		font-size: 2.5em;
+		margin-bottom: 0.8em;
+		margin-top: 0;
+	}
+}
+
+.section-title strong {
+	border-radius: 9999px;
+	background: linear-gradient(0deg, #4CA7FF 0%, #4CA7FF 100%), #D9D9D9;
+	box-shadow: 0px 6.05667px 21.19836px 0px rgba(255, 255, 255, 0.25) inset;
+	font-size: 0.55em;
+	padding-top: 0.43em;
+	padding-bottom: 0.43em;
+	padding-left: 0.6em;
+	padding-right: 0.6em;
+	font-weight: 900;
+	line-height: 1;
+	white-space: nowrap;
+}
+
+.section__buttons {
+  display: flex;
+  justify-content: center;
+}

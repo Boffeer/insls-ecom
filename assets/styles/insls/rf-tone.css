@@ -1,0 +1,61 @@
+
+@font-face {
+    font-family: 'Insales';
+    src: url('Insales-SemiBold.eot');
+    src: url('Insales-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Insales-SemiBold.woff2') format('woff2'),
+        url('Insales-SemiBold.woff') format('woff'),
+        url('Insales-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Insales';
+    src: url('Insales-Regular.eot');
+    src: url('Insales-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Insales-Regular.woff2') format('woff2'),
+        url('Insales-Regular.woff') format('woff'),
+        url('Insales-Regular.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Insales';
+    src: url('Insales-Light.eot');
+    src: url('Insales-Light.eot?#iefix') format('embedded-opentype'),
+        url('Insales-Light.woff2') format('woff2'),
+        url('Insales-Light.woff') format('woff'),
+        url('Insales-Light.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Insales';
+    src: url('Insales-Bold.eot');
+    src: url('Insales-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Insales-Bold.woff2') format('woff2'),
+        url('Insales-Bold.woff') format('woff'),
+        url('Insales-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Insales';
+    src: url('Insales-ExtraBold.eot');
+    src: url('Insales-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Insales-ExtraBold.woff2') format('woff2'),
+        url('Insales-ExtraBold.woff') format('woff'),
+        url('Insales-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}

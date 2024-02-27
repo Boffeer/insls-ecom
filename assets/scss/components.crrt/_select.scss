@@ -1,0 +1,36 @@
+ @import "../components.b/controls/select";
+
+.select {
+	font-size: 1rem;
+  --fg: var(--fg-caption);
+  // --fg: #4f4f4f;
+  --fg-selected: #4f4f4f;
+  // --label-color: var(--bg-element);
+  --border-color: ;
+  --bg: #fbfbfb;
+  --padding: 1.85em 0.95em;
+  --fz: 1.4em;
+  --fw: 300;
+  --lh: initial;
+  --brad: 1.36em;
+
+  --angle-width: 0.6em 0.45em 0 0.45em;
+  --angle-color: #D9D9D9;
+  --angle-top: 2.3em;
+  --angle-right: 1.4em;
+
+  --list-gap: 1.5em;
+  --list-padding: 2.6em 1.3em;
+  --list-bg: #F4F5F6;
+  --list-selected: var(--c-secondary);
+
+  @media (max-width: $tablet) {
+    --fz: 1.3em;
+    --padding: 1.3em 1em;
+    --angle-top: 1.7em;
+  }
+}
+
+ .select__toggle {
+   font-weight: 500;
+ }

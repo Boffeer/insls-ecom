@@ -1,0 +1,10 @@
+
+.success  {
+  background: none;
+}
+
+.success .faq__content {
+  @media (min-width: $tablet + 1) {
+    grid-template-columns: auto 70%;
+  }
+}

@@ -1,0 +1,5 @@
+.blog__gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(37rem, 1fr));
+  gap: 2rem;
+}/*# sourceMappingURL=blog.css.map */

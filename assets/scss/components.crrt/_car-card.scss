@@ -1,0 +1,179 @@
+.car-card {
+	--brad: 3em;
+	background: var(--bg-card);
+	border-radius: var(--brad);
+  padding-bottom: 5.7em;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $tablet) {
+    padding-bottom: 2em;
+  }
+}
+
+.car-card__media {
+	width: 100%;
+	height: 31.9em;
+	margin-bottom: 1em;
+	border-radius: var(--brad) var(--brad) 0 0;
+
+	@media (max-width: $tablet) {
+		height: 26.9em;
+		margin-bottom: 0.3em;
+	}
+	@media (max-width: $mobile) {
+		height: 16.9em;
+	}
+
+}
+.car-card__media-pic {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+}
+.car-card__media-img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: inherit;
+}
+
+.car-card__header {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	margin-bottom: 2.5em;
+
+	@media (max-width: $tablet) {
+		grid-template-columns: 100%;
+		row-gap: 1.5em;
+		margin-bottom: 1.7em;
+	}
+}
+
+.car-card__title {
+	color: var(--fg-regular);
+	line-height: initial;
+	font-size: 2.5em;
+	font-weight: 900;
+	text-transform: uppercase;
+
+	@media (max-width: $tablet) {
+		font-size: 1.7em;
+	}
+}
+
+.car-card__header-info {
+	display: flex;
+	flex-direction: column;
+
+	@media (max-width: $tablet) {
+		flex-direction: row;
+		align-items: baseline;
+	}
+}
+
+.car-card__price {
+	color: var(--fg-regular);
+	font-size: 2.5em;
+	font-weight: 400;
+	text-align: right;
+	margin-bottom: 0.36em;
+	white-space: nowrap;
+
+	@media (max-width: $tablet) {
+		font-size: 2em;
+		margin-bottom: 0;
+		margin-right: 0.4em;
+	}
+}
+
+.car-card__caption {
+	font-size: 1.5em;
+	color: var(--fg-third);
+	text-align: right;
+
+	@media (max-width: $tablet) {
+		font-size: 1.4em;
+		font-weight: 300;
+		text-align: left;
+	}
+}
+
+.car-card__body {
+	padding-left: 6em;
+	padding-right: 6em;
+
+	@media (max-width: $tablet) {
+		padding-left: 1.5em;
+		padding-right: 1.5em;
+	}
+}
+
+.car-card__body:last-child {
+  margin-top: auto;
+}
+
+.car-card__bullets {
+	display: grid;
+	grid-template-columns: repeat(4, 9em);
+	gap: 1.5em 3em;
+	margin-bottom: 2em;
+
+	@media (max-width: $tablet) {
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1em;
+		margin-bottom: 1.5em;
+	}
+}
+
+.car-card-bullet {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1.4em 2em 1em;
+	border-radius: 1em;
+	border: 0.1em solid var(--c-secondary);
+	width: 100%;
+
+	@media (max-width: $tablet) {
+		padding: 1em 0.5em;
+	}
+}
+
+.car-card-bullet__media {
+	height: 3.2em;
+	width: 100%;
+	margin-bottom: 1.1em;
+
+	@media (max-width: $tablet) {
+		height: 1.9em;
+		margin-bottom: 0.4em;
+	}
+}
+.car-card-bullet__media-pic {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.car-card-bullet__media-img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.card-card-bullet__caption {
+	color: var(--c-secondary);
+	text-align: center;
+	font-size: 1.5em;
+
+	@media (max-width: $tablet) {
+		font-size: 1.2em;
+	}
+}
+
+.car-card__button {
+	width: 100%;
+}

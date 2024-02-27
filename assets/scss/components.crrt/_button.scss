@@ -1,0 +1,72 @@
+ @import "../components.b/controls/button";
+
+.button-primary,
+.button-secondary {
+  --ff: var(--ff-regular);
+  --fz: 1.4rem;
+  --fw: 400;
+  --lh: 1;
+  --ls: initial;
+
+  --padding-block: 2em;
+  --padding-inline: 2em;
+
+  min-width: 24rem;
+
+  @media (max-width: $tablet) {
+    --ls: 0.06em;
+    --fz: 1.2rem;
+    min-width: 15rem;
+    border-radius: 1.16em;
+  --padding-block: 1.5em;
+  }
+}
+
+.button-primary {
+  --fg: var(--fg-on);
+  --bg: var(--gradient-primary);
+
+  --border-width: 0;
+  --border-color: transparent;
+  --border-radius: 1em;
+  text-transform: uppercase;
+  box-shadow: 0px 0.35556em 0px 0px #CF5C59, 0px 0.235656em 0.424795em 0px rgba(255, 255, 255, 0.25) inset;
+
+  @media (max-width: $tablet) {
+    box-shadow: 0px 0.27556em 0px 0px #CF5C59, 0px 0.235656em 0.424795em 0px rgba(255, 255, 255, 0.25) inset;
+  }
+}
+
+.button-primary:hover {
+  @media (any-hover:hover) {
+    box-shadow: 0px 0px 0px 0px #CF5C59, 0px 0px 0px 0px rgba(255, 255, 255, 0.25) inset;
+    transform: translateY(0.36em);
+  }
+}
+
+
+.button-secondary {
+  /*
+  --ff: var(--ff-regular);
+  --fz: 2rem;
+  --fw: 500;
+  --lh: initial;
+
+  --padding-block: 1.25em;
+  --padding-inline: 1.5em;
+
+  --fg: var(--c-primary);
+  --bg: var(--bg-app);
+
+  --border-width: 0.1rem;
+  --border-color: var(--c-primary);
+  --border-radius: 9999px;
+  */
+  --fg: var(--c-secondary);
+  --bg: transparent;
+
+  --border-width: 0.1em;
+  --border-color: var(--c-secondary);
+  --border-radius: 1em;
+  text-transform: uppercase;
+}
