@@ -4,15 +4,22 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 24px;
+
+  @media (max-width: 1100px) {
+    margin-bottom: 32px;
+  }
 }
+
 .carousel-screen__swiper {
-  max-width: calc(100% - 144px);
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 32px;
-  background: #2B2D33;
-  overflow: hidden;
-  padding: 48px;
+  @media (min-width: 1101px) {
+    max-width: calc(100% - 144px);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 32px;
+    background: #2B2D33;
+    overflow: hidden;
+    padding: 48px;
+  }
 }
 
 .carousel-screen__slide {
@@ -46,6 +53,7 @@
   background-image: url('../../img/common.insl/ecom-arrow-icon.svg');
   background-size: 100%;
   transition: all 0.3s ease;
+  border: 1px solid #2B2D33;
 }
 
 .carousel-screen__button-prev {
@@ -56,11 +64,14 @@
 
 .carousel-screen__button-prev:hover,
 .carousel-screen__button-next:hover {
-  border-radius: 8px;
+  @media (any-hover: hover) {
+    border-radius: 8px;
+  }
 }
 
 .carousel-screen__button-prev.swiper-button-disabled,
 .carousel-screen__button-next.swiper-button-disabled {
   opacity: 1;
   background-color: #CACACC;
+  border-color: #fff;
 }
