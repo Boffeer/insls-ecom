@@ -9,12 +9,16 @@
   background-color: #498CE9;
   border-radius: 0.6em;
   color: #fff;
-  transition: all 0.3s var(--tr-jolly-enter);
+  transition: all 0.3s ease;
   text-align: center;
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
   border: none;
+}
+
+.button-primary:hover {
+  background-color: #5C98EC;
 }
 
 .button-primary__text {
@@ -48,4 +52,7 @@
 
 .button-primary--dark {
   background-color: #2B2D33;
+}
+.button-primary--dark:hover {
+  background-color: #000;
 }
