@@ -1,0 +1,70 @@
+.ecom-shifter {
+  padding-top: 80px;
+  padding-bottom: 100px;
+  color: #fff;
+  background-color: #498CE9;
+  max-width: 1270px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 32px;
+}
+
+.ecom-shifter__container {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+
+.ecom-shifter__title {
+  font-size: var(--heading-3-size);
+  line-height: var(--heading-3-height);
+  text-align: left;
+}
+.ecom-shifter__desc {
+  text-align: left;
+  font-size: var(--heading-4-size);
+  line-height: var(--heading-4-height);
+}
+
+.ecom-shifter__container {
+  display: grid;
+  grid-template-columns: 510px auto;
+}
+
+.ecom-shifter__media {
+  margin-top: -120px;
+  margin-left: -300px;
+  margin-right: -80px;
+  margin-bottom: -100px;
+  width: auto;
+  position: relative;
+}
+
+.ecom-shifter__media::before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  z-index: 1;
+  display: block;
+  width: 80%;
+  height: 80%;
+  background-image: url('../../img/common.insl/ecom-shifter-line.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ecom-shifter__pic {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+.ecom-shifter__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

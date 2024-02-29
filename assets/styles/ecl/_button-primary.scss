@@ -1,0 +1,51 @@
+.button-primary {
+  --fz: var(--fz-button);
+  --padding-block: 9px;
+  --padding-inline: 48px;
+  display: inline-block;
+  font-size: var(--fz);
+  font-family: var(--ff-regular);
+  padding: var(--padding-block) var(--padding-inline);
+  background-color: #498CE9;
+  border-radius: 0.6em;
+  color: #fff;
+  transition: all 0.3s var(--tr-jolly-enter);
+  text-align: center;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+
+.button-primary__text {
+  display: block;
+}
+
+.button-primary__small {
+  display: block;
+  font-size: 0.6em;
+  font-weight: 400;
+  margin-top: 0.2em;
+}
+
+
+.button-primary--big {
+  --fz: var(--heading-5-size);
+  --padding-block: 12px;
+}
+.button-primary--full {
+  max-width: 100%;
+  width: 100%;
+}
+
+.button-primary--center {
+  display: block;
+  width: 100%;
+  max-width: 362px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-primary--dark {
+  background-color: #2B2D33;
+}
