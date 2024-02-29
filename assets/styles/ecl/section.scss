@@ -180,14 +180,14 @@
 }
 
 .section-cards--features {
-  @media (max-width: 1100px) {
-    grid-template-areas: "a1 a1"
-                         "a2 a4"
-                         "a3 a4"
-                         "a5 a4"
-                         "a5 a6"
-                         "a5 a6";
-  }
+	@media (max-width: 1100px) {
+		grid-template-areas:  "a1 a1"
+													"a2 a4"
+													"a3 a4"
+													"a5 a4"
+													"a5 a6"
+													"a5 a6";
+	}
 
   @media (max-width: 576px) {
     grid-template-areas: none;
@@ -195,7 +195,7 @@
   }
 }
 
-@media (min-width: 577px) {
+@media (min-width: 577px) and (max-width: 1100px){
   .section-cards--features > *:nth-child(1) {
     grid-area: a1;
   }
