@@ -38,6 +38,12 @@
   display: flex;
   justify-content: space-around;
   min-width: 100%;
+
+  @media (max-width: 576px) {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr 1fr;
+  }
 }
 
 .marquee__card {
@@ -55,6 +61,13 @@
   margin-right: 40px;
   transition: all 0.1s ease-in-out;
   box-shadow: 0 0 8px rgba(0,0,0, 0.04), 0 6px 28px rgba(50,50,71, 0.08) ;
+}
+
+.marquee__card:nth-child(even) {
+  @media (max-width: 576px) {
+    position: relative;
+    right: 50%;
+  }
 }
 
 .marquee__card-img {

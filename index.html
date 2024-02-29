@@ -457,7 +457,7 @@
   <section class="section section--dark">
     <div class="container">
       <h2 class="section__title">Преимущества интернет-магазина <br> на inSales</h2>
-      <p class="section__desc">Оцените удобство и простоту создания своего сайта</p>
+      <p class="section__desc">Оцените удобство и простоту создания&nbsp;своего&nbsp;сайта</p>
       <div class="section-cards section-cards--features">
         <article class="section-card">
           <h3 class="section-card__title">Галерея шаблонов и виджетов</h3>
@@ -562,11 +562,18 @@
       <h2 class="section__title section__title--small">
         Адаптивные шаблоны для любого бизнеса
       </h2>
-      <ul class="pills">
-        <li class="pills__item">Готовые блоки и виджеты</li>
-        <li class="pills__item">Современный CRM-функционал</li>
-        <li class="pills__item">Интеграции с сервисами</li>
-      </ul>
+      <div class="pills-list">
+        <ul class="pills">
+          <li class="pills__item">Готовые блоки и виджеты</li>
+          <li class="pills__item">Современный CRM-функционал</li>
+          <li class="pills__item">Интеграции с сервисами</li>
+        </ul>
+        <ul aria-hidden="true" class="pills">
+          <li class="pills__item">Готовые блоки и виджеты</li>
+          <li class="pills__item">Современный CRM-функционал</li>
+          <li class="pills__item">Интеграции с сервисами</li>
+        </ul>
+      </div>
 
       <div class="carousel-screen">
         <div class="carousel-screen__swiper swiper">
@@ -607,6 +614,7 @@
             slidesPerView: "auto",
             // centeredSlides: true,
             spaceBetween: 40,
+            freeMode: true,
           });
         });
       </script>

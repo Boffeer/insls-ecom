@@ -18,6 +18,12 @@
   @media (max-width: 768px) {
     margin-top: -40px;
   }
+
+  @media (max-width: 576px) {
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 100%;
+  }
 }
 
 .ecom-shifter__container {
@@ -34,8 +40,15 @@
   @media (max-width: 962px) {
     grid-template-columns: 100%;
   }
+
   @media (max-width: 768px) {
     grid-template-columns: 348px auto;
+  }
+
+  @media (max-width: 576px) {
+    padding-left: 0;
+    padding-right: 0;
+    grid-template-columns: 100%;
   }
 }
 
@@ -49,6 +62,10 @@
     font-size: 26px;
     line-height: 1.25;
   }
+  @media (max-width: 576px) {
+    font-size: 24px;
+    text-align: center;
+  }
 }
 .ecom-shifter__desc {
   text-align: left;
@@ -58,6 +75,9 @@
   @media (max-width: 768px) {
     font-size: 16px;
     line-height: 1.25;
+  }
+  @media (max-width: 576px) {
+    text-align: center;
   }
 }
 
@@ -86,6 +106,12 @@
     margin-left: 0;
     margin-right: -40px;
     margin-bottom: -76px;
+  }
+
+  @media (max-width: 962px) {
+    margin: 0;
+    margin-top: 32px;
+    margin-bottom: -50px;
   }
 }
 

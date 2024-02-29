@@ -36,6 +36,10 @@
 .button-primary--big {
   --fz: var(--heading-5-size);
   --padding-block: 12px;
+
+  @media (max-width: 576px) {
+    --fz: 16px;
+  }
 }
 .button-primary--full {
   max-width: 100%;
