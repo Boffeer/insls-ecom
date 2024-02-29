@@ -627,7 +627,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section-tools">
     <div class="container">
       <h2 class="section__title">Все инструменты продаж уже внутри</h2>
       <p class="section__desc">Все инструменты продаж уже внутри</p>
@@ -717,6 +717,83 @@
             </figure>
           </article>
       </div>
+      <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+          let previousWidth = window.innerWidth;
+          const BREAKPOINT = 576;
+          const cardsTools = document.querySelector('.cards-tools');
+
+          let slides = {};
+          let cardsInitialOrder = [];
+          [...cardsTools.children].forEach(card => {
+            if (!slides.hasOwnProperty(card.dataset.toolsCarousel)) {
+              slides[card.dataset.toolsCarousel] = [];
+            }
+            slides[card.dataset.toolsCarousel].push(card);
+            cardsInitialOrder.push(card);
+          })
+
+          function buildCarousel() {
+            for (carouselName in slides) {
+              const carousel = document.createElement('div');
+              const carouselWrapper = document.createElement('div');
+              carousel.classList.add('swiper');
+              carouselWrapper.classList.add('swiper-wrapper');
+              cardsTools.append(carousel)
+              carousel.append(carouselWrapper)
+
+              slides[carouselName].forEach(slide => {
+                const slideWrap = document.createElement('div')
+                slideWrap.classList.add('swiper-slide');
+                slideWrap.append(slide);
+                carouselWrapper.append(slideWrap);
+              })
+
+              const swiperCarousel = new Swiper(carousel, {
+                slidesPerView: 1,
+                autoHeight: true,
+                spaceBetween: 20,
+                centeredSlides: true,
+              });
+              setTimeout(() => {
+                swiperCarousel.update();
+              }, 200);
+            }
+          }
+
+          function destroyCarousel() {
+            cardsInitialOrder.forEach(card => {
+              cardsTools.append(card);
+            })
+            cardsTools.querySelectorAll('.swiper').forEach(swiper => {
+              swiper.swiper.destroy();
+              swiper.remove();
+            });
+          }
+
+          function rerenderCardsTools() {
+              if (window.innerWidth <= BREAKPOINT) {
+                if (cardsTools.classList.contains('cards-tools--carousels')) return false;
+                buildCarousel()
+                cardsTools.classList.add('cards-tools--carousels')
+              } else {
+                if (!cardsTools.classList.contains('cards-tools--carousels')) return false;
+                destroyCarousel()
+                cardsTools.classList.remove('cards-tools--carousels')
+              }
+          }
+          window.addEventListener('resize', function() {
+            let currentWidth = window.innerWidth;
+
+            if (currentWidth !== previousWidth) {
+              rerenderCardsTools();
+            }
+
+            previousWidth = currentWidth;
+          });
+          rerenderCardsTools();
+        })
+      </script>
     </div>
   </section>
 

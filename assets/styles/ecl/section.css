@@ -416,6 +416,12 @@
          columns: 2;
   }
 }
+@media (max-width: 576px) {
+  .cards-tools {
+    -moz-columns: unset;
+         columns: unset;
+  }
+}
 
 .cards-tools > * {
   margin-bottom: 24px;
@@ -425,54 +431,66 @@
   height: initial;
 }
 
-.cards-tools > *:nth-child(1) {
+.cards-tools > .section-card:nth-child(1) {
   grid-area: a1;
 }
 
-.cards-tools > *:nth-child(2) {
+.cards-tools > .section-card:nth-child(2) {
   grid-area: a2;
 }
 
-.cards-tools > *:nth-child(2) .section-card__media {
+.cards-tools > .section-card:nth-child(2) .section-card__media {
   margin-left: -40px;
   margin-right: -25px;
   width: auto;
 }
 
-.cards-tools > *:nth-child(3) {
+.cards-tools .swiper:nth-child(1) .swiper-slide:nth-child(2) .section-card__media {
+  margin-left: -20px;
+  margin-right: -10px;
+  width: auto;
+}
+
+.cards-tools > .section-card:nth-child(3) {
   grid-area: a3;
 }
 
-.cards-tools > *:nth-child(4) {
+.cards-tools > .section-card:nth-child(4) {
   grid-area: a4;
 }
 
-.cards-tools > *:nth-child(5) {
+.cards-tools > .section-card:nth-child(5) {
   grid-area: a5;
 }
 
-.cards-tools > *:nth-child(5) .section-card__media {
+.cards-tools > .section-card:nth-child(5) .section-card__media {
   margin-left: 0;
   margin-bottom: -80px;
   margin-right: -40px;
   width: auto;
 }
 @media (max-width: 962px) {
-  .cards-tools > *:nth-child(5) .section-card__media {
+  .cards-tools > .section-card:nth-child(5) .section-card__media {
     margin-bottom: -40px;
   }
 }
 
-.cards-tools > *:nth-child(6) {
+.cards-tools .swiper:nth-child(1) .swiper-slide:nth-child(5) .section-card__media {
+  margin-bottom: -25px;
+  margin-right: -25px;
+  width: auto;
+}
+
+.cards-tools > .section-card:nth-child(6) {
   grid-area: a6;
 }
 
-.cards-tools > *:nth-child(6) .section-card {
+.cards-tools > .section-card:nth-child(6) .section-card {
   padding-bottom: 0;
   padding-right: 0;
 }
 
-.cards-tools > *:nth-child(6) .section-card__media {
+.cards-tools > .section-card:nth-child(6) .section-card__media {
   margin-top: 0;
   margin-bottom: -50px;
   margin-right: -40px;
@@ -480,45 +498,49 @@
   width: auto;
 }
 @media (max-width: 1100px) {
-  .cards-tools > *:nth-child(6) .section-card__media {
+  .cards-tools > .section-card:nth-child(6) .section-card__media {
     margin-right: 0;
   }
 }
 
-.cards-tools > *:nth-child(6) .section-card__pic {
+.cards-tools > .section-card:nth-child(6) .section-card__pic {
   margin-top: 36px;
 }
 @media (max-width: 1400px) {
-  .cards-tools > *:nth-child(6) .section-card__pic {
+  .cards-tools > .section-card:nth-child(6) .section-card__pic {
     margin-top: 50px;
   }
 }
 
-.cards-tools > *:nth-child(7) {
+.cards-tools > .section-card:nth-child(7) {
   grid-area: a7;
 }
 
-.cards-tools > *:nth-child(8) {
+.cards-tools > .section-card:nth-child(8) {
   grid-area: a8;
 }
 
-.cards-tools > *:nth-child(9) {
+.cards-tools > .section-card:nth-child(9) {
   grid-area: a9;
 }
 
-.cards-tools > *:nth-child(10) {
+.cards-tools > .section-card:nth-child(10) {
   grid-area: a10;
 }
 
-.cards-tools > *:nth-child(10) .section-card__media {
+.cards-tools > .section-card:nth-child(10) .section-card__media {
   margin-left: 0;
   margin-bottom: -80px;
   width: auto;
 }
 @media (max-width: 1100px) {
-  .cards-tools > *:nth-child(10) .section-card__media {
+  .cards-tools > .section-card:nth-child(10) .section-card__media {
     margin-bottom: -60px;
   }
+}
+
+.cards-tools .swiper:nth-of-type(2) .swiper-slide:nth-child(5) .section-card__media {
+  margin-bottom: -25px;
 }
 
 .button-primary {
@@ -1157,4 +1179,28 @@
 
 .is-light .refresh-menu-nav-container {
   background-color: #fff;
+}
+
+@media (max-width: 576px) {
+  .section-tools {
+    overflow: hidden;
+  }
+}
+
+.cards-tools .swiper-slide {
+  width: 100%;
+}
+
+.cards-tools .swiper-slide > * {
+  max-width: calc(100% - 70px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cards-tools .swiper-slide-prev > * {
+  transform: translateX(25px);
+}
+
+.cards-tools .swiper-slide-next > * {
+  transform: translateX(-25px);
 }/*# sourceMappingURL=section.css.map */
