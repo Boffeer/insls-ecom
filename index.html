@@ -556,7 +556,7 @@
     </div>
   </section>
 
-  <section class="section section--narrow section--secondary">
+  <section class="section section--narrow section--secondary section--overflow">
     <div class="container">
       <h2 class="section__title section__title--small">
         Адаптивные шаблоны для любого бизнеса
@@ -571,22 +571,44 @@
         <div class="carousel-screen__swiper swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide carousel-screen__slide">
-              <img src="" alt="" class="carousel-screen__img">
+              <img src="./assets/img/common.insl/ecom-carousel-1.png" alt="" class="carousel-screen__img">
             </div>
             <div class="swiper-slide carousel-screen__slide">
-              <img src="" alt="" class="carousel-screen__img">
+              <img src="./assets/img/common.insl/ecom-carousel-2.png" alt="" class="carousel-screen__img">
             </div>
             <div class="swiper-slide carousel-screen__slide">
-              <img src="" alt="" class="carousel-screen__img">
+              <img src="./assets/img/common.insl/ecom-carousel-3.png" alt="" class="carousel-screen__img">
             </div>
             <div class="swiper-slide carousel-screen__slide">
-              <img src="" alt="" class="carousel-screen__img">
+              <img src="./assets/img/common.insl/ecom-carousel-4.png" alt="" class="carousel-screen__img">
+            </div>
+            <div class="swiper-slide carousel-screen__slide">
+              <img src="./assets/img/common.insl/ecom-carousel-5.png" alt="" class="carousel-screen__img">
+            </div>
+            <div class="swiper-slide carousel-screen__slide">
+              <img src="./assets/img/common.insl/ecom-carousel-6.png" alt="" class="carousel-screen__img">
             </div>
           </div>
         </div>
         <div class="swiper-button-prev carousel-screen__button-prev"></div>
         <div class="swiper-button-next carousel-screen__button-next"></div>
       </div>
+      <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+          let carouselScreen = new Swiper('.carousel-screen__swiper', {
+            grabCursor: true,
+            navigation: {
+              nextEl: '.carousel-screen__button-next',
+              prevEl: '.carousel-screen__button-prev',
+            },
+            cssMode: true,
+            mousewheel: true,
+            slidesPerView: "auto",
+            // centeredSlides: true,
+            spaceBetween: 40,
+          });
+        });
+      </script>
 
       <div class="button-socket">
         <a href="" class="line-animation hide-sm">
