@@ -44,7 +44,7 @@
   <link href="./assets/styles/insls/menu.css" rel="stylesheet" type="text/css" />
   <link href="./assets/styles/insls/menu-footer.css" rel="stylesheet" type="text/css" />
 
-  <link href="./assets/styles/ecl/section.css" rel="stylesheet" type="text/css" />
+  <link href="./assets/styles/ecl/ecl.css" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -620,7 +620,7 @@
       </script>
 
       <div class="button-socket">
-        <a href="" class="line-animation hide-sm">
+        <a href="" class="line-animation">
           Смотреть все шаблоны
         </a>
       </div>
@@ -630,7 +630,7 @@
   <section class="section section-tools">
     <div class="container">
       <h2 class="section__title">Все инструменты продаж уже внутри</h2>
-      <p class="section__desc">Все инструменты продаж уже внутри</p>
+      <p class="section__desc">Используйте широкий CMS-функционал для управления бизнесом</p>
 
       <div class="cards-tools">
           <article class="section-card" data-tools-carousel="1">
@@ -742,6 +742,15 @@
               cardsTools.append(carousel)
               carousel.append(carouselWrapper)
 
+
+              const hasScrollbar = carouselName == 2;
+              if (hasScrollbar) {
+                const scrollbar = document.createElement('div');
+                scrollbar.classList.add('swiper-scrollbar')
+                carousel.append(scrollbar)
+              }
+
+
               slides[carouselName].forEach(slide => {
                 const slideWrap = document.createElement('div')
                 slideWrap.classList.add('swiper-slide');
@@ -749,12 +758,20 @@
                 carouselWrapper.append(slideWrap);
               })
 
-              const swiperCarousel = new Swiper(carousel, {
+              let swpierConfig = {
                 slidesPerView: 1,
                 autoHeight: true,
                 spaceBetween: 20,
                 centeredSlides: true,
-              });
+              }
+
+              if (hasScrollbar) {
+                swpierConfig.scrollbar = {
+                  el: ".swiper-scrollbar",
+                }
+              }
+
+              const swiperCarousel = new Swiper(carousel, swpierConfig);
               setTimeout(() => {
                 swiperCarousel.update();
               }, 200);
@@ -840,6 +857,9 @@
         <div class="marquee__card">
           <img src="./assets/img/common.insl/ecom-integration-4.png" alt="" class="marquee__card-img">
         </div>
+        <div class="marquee__card hide show-sm">
+          <img src="./assets/img/common.insl/ecom-integration-atol.png" alt="" class="marquee__card-img">
+        </div>
       </div>
       <div aria-hidden="true" class="marquee__track">
         <div class="marquee__card">
@@ -875,11 +895,14 @@
         <div class="marquee__card">
           <img src="./assets/img/common.insl/ecom-integration-4.png" alt="" class="marquee__card-img">
         </div>
+        <div class="marquee__card hide show-sm">
+          <img src="./assets/img/common.insl/ecom-integration-atol.png" alt="" class="marquee__card-img">
+        </div>
       </div>
     </div>
     <div class="container">
       <die class="button-socket">
-        <a href="" class="line-animation hide-sm">
+        <a href="" class="line-animation">
           Смотреть все сервисы
         </a>
       </die>

@@ -41,7 +41,7 @@
 }
 
 .carousel-screen__slide:last-child {
-  padding-right: 100px;
+  // padding-right: 100px;
 }
 
 
@@ -73,9 +73,7 @@
 
 .carousel-screen__button-prev:hover,
 .carousel-screen__button-next:hover {
-  @media (any-hover: hover) {
-    border-radius: 8px;
-  }
+  border-radius: 8px;
 }
 
 .carousel-screen__button-prev.swiper-button-disabled,
